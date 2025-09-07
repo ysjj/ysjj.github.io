@@ -1,0 +1,7 @@
+# Site settings
+lang: ja
+title: ysjj's pages
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-hacker
