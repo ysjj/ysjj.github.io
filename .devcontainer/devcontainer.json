@@ -1,0 +1,20 @@
+{
+    "name": "GitHub Pages",
+    "forwardPorts": [4000, 35729],
+    "overrideCommand": false,
+    "build": {
+        "dockerfile": "./Containerfile",
+        "context": "..",
+        "args": {
+            "PUBLISHING_SOURCE": "/workspace"
+        },
+        "options": [
+            "--tag", "localhost/github-pages:latest"
+        ]
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "runArgs": [
+        "--name", "github-pages"
+    ]
+}

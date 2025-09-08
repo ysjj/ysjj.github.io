@@ -1,0 +1,29 @@
+# customization of https://github.com/github/pages-gem/blob/master/Dockerfile
+ARG RUBY_VERSION=3.4.5
+FROM ruby:${RUBY_VERSION}
+
+RUN apt-get update -qq && \
+    apt-get install -y git locales make nodejs
+
+RUN echo "en_US UTF-8" > /etc/locale.gen && \
+    locale-gen en_US.UTF-8
+
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
+RUN groupadd -g 1000 gh-pages && \
+    useradd -u 1000 -g 1000 -m -s /bin/bash gh-pages
+
+USER gh-pages:gh-pages
+
+COPY --chown=gh-pages:gh-pages --chmod=0644 ".devcontainer/Gemfile" /home/gh-pages
+ENV BUNDLE_GEMFILE=/home/gh-pages/Gemfile
+RUN NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install
+
+COPY --chown=gh-pages:gh-pages --chmod=0755 ".devcontainer/jekyll.sh" /home/gh-pages
+
+ARG PUBLISHING_SOURCE=/home/gh-pages/docs
+ENV PUBLISHING_SOURCE=${PUBLISHING_SOURCE}
+
+CMD ["/home/gh-pages/jekyll.sh", "serve", "--host", "0.0.0.0", "--livereload"]
