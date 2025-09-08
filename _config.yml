@@ -1,7 +1,10 @@
 # Site settings
 lang: ja
 title: ysjj's pages
+email: ysiijj+github@gmail.com
 
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-hacker
+plugins:
+  - jekyll-feed
