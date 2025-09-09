@@ -7,4 +7,3 @@ exec env PAGES_REPO_NWO=$GITHUB_REPO_NWO \
   bundle exec jekyll "$@" \
                       --source      "$PUBLISHING_SOURCE" \
                       --destination "$PUBLISHING_SOURCE/_site"
-
