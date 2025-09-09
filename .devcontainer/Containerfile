@@ -21,9 +21,11 @@ COPY --chown=gh-pages:gh-pages --chmod=0644 ".devcontainer/Gemfile" /home/gh-pag
 ENV BUNDLE_GEMFILE=/home/gh-pages/Gemfile
 RUN NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install
 
-COPY --chown=gh-pages:gh-pages --chmod=0755 ".devcontainer/jekyll.sh" /home/gh-pages
+RUN mkdir /home/gh-pages/bin
+ENV PATH="/home/gh-pages/bin:$PATH"
+COPY --chown=gh-pages:gh-pages --chmod=0755 ".devcontainer/*.sh" /home/gh-pages/bin
 
 ARG PUBLISHING_SOURCE=/home/gh-pages/docs
 ENV PUBLISHING_SOURCE=${PUBLISHING_SOURCE}
 
-CMD ["/home/gh-pages/jekyll.sh", "serve", "--host", "0.0.0.0", "--livereload"]
+CMD ["restart_onhup.sh", "jekyll.sh", "serve", "--host", "0.0.0.0", "--watch", "--force-polling", "--livereload"]
