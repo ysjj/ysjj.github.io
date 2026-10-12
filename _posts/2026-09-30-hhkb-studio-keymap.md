@@ -19,6 +19,17 @@ Fn# キーマップが覚えられていないので設定状態を
 ![Fn2](/assets/images/2026/09/30/hhkb-studio-profile1-fn2.png)
 ![Fn3](/assets/images/2026/09/30/hhkb-studio-profile1-fn3.png)
 
+### 設定ファイル[^gist]
+
+<p>
+<details>
+<summary>HHKB Studio keymap v26.10.02</summary>
+{% gist f2b93c408ee45e0ca5ac1fb121ac1429  %}
+</details>
+</p>
+
+[^gist]: 2026-10-12:設定ファイルを追加
+
 ### 2026-09-30 設定値
 
 #### 標準
@@ -65,3 +76,5 @@ Fn2 は左右の親指で押し易く、ホームポジションから手を動�
 #### Fn3
 
 わざわざ半角/全角を潰してFn3を設けたのに、未開拓。
+
+# 脚注
