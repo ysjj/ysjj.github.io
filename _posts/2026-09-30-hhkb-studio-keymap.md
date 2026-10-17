@@ -21,12 +21,10 @@ Fn# キーマップが覚えられていないので設定状態を
 
 ### 設定ファイル[^gist]
 
-<p>
-<details>
+<details style="margin-block-start:1em; margin-block-end:1em;">
 <summary>HHKB Studio keymap v26.10.02</summary>
 {% gist f2b93c408ee45e0ca5ac1fb121ac1429  %}
 </details>
-</p>
 
 [^gist]: 2026-10-12:設定ファイルを追加
 
