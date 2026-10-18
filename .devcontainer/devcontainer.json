@@ -16,6 +16,5 @@
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
     "runArgs": [
         "--name", "github-pages"
-    ],
-    "postStartCommand": "jekyll.sh serve &"
+    ]
 }
