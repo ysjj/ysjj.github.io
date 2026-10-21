@@ -12,6 +12,8 @@ tags: skk skk-jisyo
 [feat/generate-skk-jisyo](https://github.com/ysjj/furifont/tree/feat/generate-skk-jisyo) ブランチを作って
 GitHub Copilot に解析とコーディングを任せて 1時間ほどプロンプト出しとレビューを繰り返し、
 それっぽいものが出来た。
+GitHub Copilot Free プランでクレジットを 4~5% ぐらい消費した。
+コードベースの大きさに比べて思ったより少なく済んだような気がする。
 
 出力されたSKK辞書ファイルは、フォント設定をFurifontにしたメモ帳で開いて
 目視確認はしているものの自分ではまだ使っていないので「作ってみた」レベル。
