@@ -19,9 +19,23 @@ GitHub Copilot Free プランでクレジットを 4~5% ぐらい消費した。
 目視確認はしているものの自分ではまだ使っていないので「作ってみた」レベル。
 常用できるものなのかは何とも言えない。
 
-<details style="margin-block-start:1em; margin-block-end:1em;">
+<style>
+    @font-face {
+        font-family: "Furifont Sans";
+        font-display: swap;
+        font-weight: 250 900;
+        ascent-override: 88%;
+        descent-override: 12%;
+        line-gap-override: 0%;
+        src: url("https://furifont.antfu.me/fonts/FurifontSansVF.woff2?v=0.6.2") format("woff2");
+    }
+    .furifont .gist .blob-code {
+        font-family: "Furifont Sans";
+    }
+</style>
+<details style="margin-block-start:1em; margin-block-end:1em;" class="furifont">
 <summary>SKK-JISYO.furifont v0.6.2</summary>
-{% gist 10b89737085bf41c044f4f71fca6fdcb %}
+{% gist 10b89737085bf41c044f4f71fca6fdcb SKK-JISYO.furifont %}
 </details>
 
 どの読み(ルビ)を基本とするのか、他のどの読みに異字体セレクタ:VS242~を割り振るのかは
